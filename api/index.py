@@ -51,7 +51,7 @@ def before_request():
 @app.route('/api/login', methods=['post'])
 def login():
     if g.user:
-        return jsonify({'code': 1, 'msg': "已登录"})
+        return jsonify({'code': 1, 'msg': "已登入"})
     try:
         data = json.loads(request.get_data(as_text=True))
         # myquery = {'username': data['username'], 'password': data['password']}
